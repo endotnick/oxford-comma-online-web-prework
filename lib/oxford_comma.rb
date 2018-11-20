@@ -5,7 +5,10 @@ def oxford_comma(array)
   else
     array.insert(-2, 'and')
     if array.size > 3
-      return array.join(', ')
+      el = array.pop
+      out = array.join(', ')
+      return out << " #{el}"
+      
     else
       return array.join(' ')
     end
